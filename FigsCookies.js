@@ -22,6 +22,9 @@ var Cookie = {
         var c_value = val + "; expires=" + date.toUTCString();
         document.cookie = name + "=" + c_value;
     }, 
+    delete: function(name) {
+        document.cookie = name + '=;expires=Thu, 05 Oct 1990 00:00:01 GMT;';
+    },
     enabled: function () {
         var cookieEnabled = (navigator.cookieEnabled) ? true : false;
 
